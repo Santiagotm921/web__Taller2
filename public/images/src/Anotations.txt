@@ -1,0 +1,8 @@
+El '/' me indica la ruta a la que quiero llevar al
+usuario.
+
+- res.send-- lo que va a ver el usuario
+- Para iniciar el codigo: npm start
+
+//cuando mandan el res.sendFile(__dirname + '/ruta del html')
+Que es el "__dirname"??

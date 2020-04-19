@@ -1,0 +1,23 @@
+.content {
+    display: flex;
+    width: 100%;
+    background: rosybrown;
+    padding-top: 80px;
+
+    &__shoe {
+        display: flex;
+        width: 80%;
+        img {
+            display: flex;
+            width: 100%;
+            margin: -145px 0px 0px 40px;
+            transform: rotate(20deg);
+        }
+    }
+
+    &__titles {
+        width: 60%;
+        text-align: right;
+        margin: 0px 40px 0px 0px;
+    }
+}

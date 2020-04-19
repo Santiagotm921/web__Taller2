@@ -1,0 +1,58 @@
+<div class="background">
+    <img class="background--img" src="/images/imagenPrincipal.jpg" alt="background">
+</div>
+
+<section class="products">
+
+    <article class="filter">
+        <ul>
+            <h4>TYPES</h4>
+            <li><a href="">Athletic & Sneakers</a></li>
+            <li><a href="">Cleats</a></li>
+            <li><a href="">Boots</a></li>
+            <li><a href="">High Tops</a></li>
+        </ul>
+
+        <ul>
+            <h4>GENDER</h4>
+            <li><a href="">Men</a></li>
+            <li><a href="">Women</a></li>
+            <li><a href="">Kids</a></li>
+        </ul>
+
+        <h4>COLOR</h4>
+
+        <div class="filter__colors">
+            <span class="filter__colors--red"></span>
+            <span class="filter__colors--white"></span>
+            <span class="filter__colors--black"></span>
+            <span class="filter__colors--yellow"></span>
+        </div>
+
+    </article>
+
+    <article class="listProducts">
+
+        {{#each listproducts}}
+
+        <div class="screen">
+            <div class=" screen__molde">
+            </div>
+            <section class="screen__info">
+                <span>{{ @index }}</span>
+                <img class="screen__product" src="{{img}}" alt="imageProduct">
+                <span>{{ name }}</span>
+                <span>{{ price }}</span>
+                <span>{{ rating }}</span>
+                <span>{{ type }}</span>
+                <span>{{ gender }}</span>
+                <span>{{ color }}</span>
+            </section>
+
+        </div>
+
+        {{/each}}
+
+    </article>
+
+</section>

@@ -1,0 +1,12 @@
+body,
+html {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+@import 'menu';
+@import 'hamburger';
+@import 'home';
+@import 'footer';
+@import 'product';
