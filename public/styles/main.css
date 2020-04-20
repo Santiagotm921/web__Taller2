@@ -206,11 +206,12 @@ html {
 }
 
 .filter {
-  width: 195px;
+  width: 17%;
+  height: 100%;
   background: #20b3d2;
   background: linear-gradient(318deg, #20b3d2 0%, #5edce4 95%);
   border-radius: 10px;
-  margin: 25px 0px 0px 25px;
+  margin: 25px 25px 0px 25px;
   padding: 10px 25px 25px 25px;
 }
 
@@ -232,6 +233,10 @@ html {
   margin: 0px 0px 0px 15px;
 }
 
+.filter a:hover {
+  text-decoration: underline;
+}
+
 .filter h4 {
   color: white;
   margin: 30px 0px;
@@ -242,18 +247,23 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: 0px 0px 0px 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.filter__colors span {
+.filter__colors button {
   width: 25px;
   height: 25px;
+  border: none;
+  margin: 5px;
 }
 
 .filter__colors--red {
-  background: red;
+  background: #af1919;
 }
 
 .filter__colors--white {
@@ -265,7 +275,15 @@ html {
 }
 
 .filter__colors--yellow {
-  background: yellow;
+  background: rgba(255, 230, 0, 0.986);
+}
+
+.filter__colors--orange {
+  background: rgba(255, 102, 0, 0.986);
+}
+
+.filter__colors--blue {
+  background: rgba(0, 140, 255, 0.986);
 }
 
 .products {
@@ -280,10 +298,10 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.listProducts__molde {
-  position: absolute;
+  width: 80%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .screen {
@@ -293,10 +311,19 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 23%;
+  position: relative;
+  margin: 15px 5px;
+  min-width: 195px;
+}
+
+.screen h3 {
+  margin: 0px;
 }
 
 .screen__product {
-  max-width: 250px;
+  max-width: 100%;
+  /*margin: -75px 0px 0px 0px;*/
 }
 
 .screen__info {
@@ -308,15 +335,26 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  color: #20b3d2;
 }
 
 .screen__molde {
-  width: 22%;
-  height: 30%;
+  width: 100%;
+  height: 35%;
   background: #20b3d2;
   background: linear-gradient(318deg, #20b3d2 0%, #5edce4 95%);
   position: absolute;
   border-radius: 10px;
+}
+
+.screen__molde--info {
+  border: 4px solid;
+  border-image-source: linear-gradient(318deg, #20b3d2 0%, #5edce4 95%);
+  border-image-slice: 1;
+  width: 97%;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
 }
 
 .myfoot {

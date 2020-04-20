@@ -23,10 +23,12 @@
         <h4>COLOR</h4>
 
         <div class="filter__colors">
-            <span class="filter__colors--red"></span>
-            <span class="filter__colors--white"></span>
-            <span class="filter__colors--black"></span>
-            <span class="filter__colors--yellow"></span>
+            <button class="filter__colors--red"></button>
+            <button class="filter__colors--white"></button>
+            <button class="filter__colors--black"></button>
+            <button class="filter__colors--yellow"></button>
+            <button class="filter__colors--orange"></button>
+            <button class="filter__colors--blue"></button>
         </div>
 
     </article>
@@ -36,17 +38,25 @@
         {{#each listproducts}}
 
         <div class="screen">
-            <div class=" screen__molde">
-            </div>
+
+            <article class="screen__losmoldes">
+                <div class=" screen__molde"></div>
+                <div class=" screen__molde--info"></div>
+            </article>
+
+
             <section class="screen__info">
-                <span>{{ @index }}</span>
                 <img class="screen__product" src="{{img}}" alt="imageProduct">
-                <span>{{ name }}</span>
-                <span>{{ price }}</span>
+                <h3>{{ name }}</h3>
+                <span>{{ price }}$</span>
+
+                {{!--
                 <span>{{ rating }}</span>
                 <span>{{ type }}</span>
                 <span>{{ gender }}</span>
-                <span>{{ color }}</span>
+                <span>{{ color }}</span> 
+                --}}
+
             </section>
 
         </div>
