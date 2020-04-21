@@ -1,5 +1,5 @@
 body,
-html {
+html, button, select {
   margin: 0;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
@@ -211,7 +211,7 @@ html {
   background: #20b3d2;
   background: linear-gradient(318deg, #20b3d2 0%, #5edce4 95%);
   border-radius: 10px;
-  margin: 25px 25px 0px 25px;
+  margin: 25px 10px 0px 15px;
   padding: 10px 25px 25px 25px;
 }
 
@@ -290,18 +290,46 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #20b3d2;
+}
+
+.products select {
+  border: none;
+  color: #20b3d2;
+  height: 25px;
 }
 
 .listProducts {
+  width: 80%;
+  padding: 0px 21px 0px 0px;
+}
+
+.listProducts h2 {
+  color: #20b3d2;
+  margin: 20px 0px 0px 0px;
+}
+
+.listProducts__myproducts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 80%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .screen {
@@ -319,10 +347,16 @@ html {
 
 .screen h3 {
   margin: 0px;
+  padding: 0px 15px;
+  text-align: center;
 }
 
 .screen__product {
   max-width: 100%;
+  position: relative;
+  margin: -45px 0px 0px 0px;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
   /*margin: -75px 0px 0px 0px;*/
 }
 
@@ -338,9 +372,58 @@ html {
   color: #20b3d2;
 }
 
+.screen__info span {
+  position: absolute;
+  color: white;
+  margin: 5% 80%;
+}
+
+.screen__mybtn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.screen__btn {
+  border: none;
+  background: #20b3d2;
+  background: linear-gradient(318deg, #20b3d2 0%, #5edce4 95%);
+  border-radius: 15px;
+  width: 70%;
+  height: 30px;
+  color: white;
+}
+
+.screen__btn__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.screen__btn--span {
+  color: white;
+  display: inline;
+  margin: 0px 10px;
+  font-size: 11px;
+}
+
+.screen__btn--cart {
+  width: 15%;
+}
+
 .screen__molde {
   width: 100%;
-  height: 35%;
+  height: 50%;
   background: #20b3d2;
   background: linear-gradient(318deg, #20b3d2 0%, #5edce4 95%);
   position: absolute;

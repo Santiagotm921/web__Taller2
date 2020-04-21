@@ -35,33 +35,57 @@
 
     <article class="listProducts">
 
-        {{#each listproducts}}
+        <h2>SHOES</h2>
 
-        <div class="screen">
+        <div class="order">
+            <p><strong>POPULAR</strong></p>
+            <p><strong>NEW SHOES</strong></p>
+            <select>
+                <option value=""><strong>PRICE: LOW TO HIGH</strong></option>
+                <option value=""><strong>PRICE: HIGH TO LOW</strong></option>
+            </select>
+        </div>
 
-            <article class="screen__losmoldes">
-                <div class=" screen__molde"></div>
-                <div class=" screen__molde--info"></div>
-            </article>
+
+        <section class="listProducts__myproducts">
+            {{#each listproducts}}
+
+            <div class="screen">
+
+                <article class="screen__losmoldes">
+                    <div class=" screen__molde"></div>
+                    <div class=" screen__molde--info"></div>
+                </article>
 
 
-            <section class="screen__info">
-                <img class="screen__product" src="{{img}}" alt="imageProduct">
-                <h3>{{ name }}</h3>
-                <span>{{ price }}$</span>
+                <section class="screen__info">
+                    <img class="screen__product" src="{{img}}" alt="imageProduct">
+                    <h3>{{ name }}</h3>
 
-                {{!--
+                    <article class="screen__mybtn">
+                        <button class="screen__btn">
+                            <div class="screen__btn__container">
+                                <p class="screen__btn--span">Add to cart</p>
+                                <img class="screen__btn--cart" src="/images/cart.png" alt="">
+                            </div>
+                        </button>
+                    </article>
+
+                    <span>{{ price }}$</span>
+
+                    {{!--
                 <span>{{ rating }}</span>
                 <span>{{ type }}</span>
                 <span>{{ gender }}</span>
                 <span>{{ color }}</span> 
                 --}}
+                </section>
 
-            </section>
+            </div>
 
-        </div>
+            {{/each}}
 
-        {{/each}}
+        </section>
 
     </article>
 
