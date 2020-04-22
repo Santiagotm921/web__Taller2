@@ -22,6 +22,7 @@ html, button, select {
 .menu {
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 
 .menu__container {
@@ -304,6 +305,10 @@ html, button, select {
   padding: 0px 21px 0px 0px;
 }
 
+.listProducts a {
+  text-decoration: none;
+}
+
 .listProducts h2 {
   color: #20b3d2;
   margin: 20px 0px 0px 0px;
@@ -357,6 +362,7 @@ html, button, select {
   margin: -45px 0px 0px 0px;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
+  pointer-events: none;
   /*margin: -75px 0px 0px 0px;*/
 }
 
@@ -376,6 +382,10 @@ html, button, select {
   position: absolute;
   color: white;
   margin: 5% 80%;
+}
+
+.screen__info h3 {
+  text-decoration: none;
 }
 
 .screen__mybtn {
@@ -548,6 +558,8 @@ html, button, select {
   display: -ms-flexbox;
   display: flex;
   width: 80%;
+  z-index: 0;
+  position: relative;
 }
 
 .content__shoe img {
@@ -564,5 +576,10 @@ html, button, select {
   width: 60%;
   text-align: right;
   margin: 0px 40px 0px 0px;
+  color: white;
+}
+
+.content__titles h1 {
+  font-size: 36px;
 }
 /*# sourceMappingURL=main.css.map */

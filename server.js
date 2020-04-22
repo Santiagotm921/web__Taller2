@@ -15,26 +15,20 @@ app.get('/', function (req, res) {
     res.render('home', context);
 });
 
-//------------------------------------------------------------------------------------------
-app.get('/product/:name', function (req, res) {
 
-    if (req.params.name == 'Americana') {
-        var context = {
-            title: 'AMERICANA HI SHOE',
-            subtitle: 'RETRO LOOK THAT HONORS THE LEGENDARY AMERICANA B-BALL SHOE',
-            description: 'These streetwear shoes recall the look of the Americana, a legendary B-ball crusader from the 70s and 80s. The leather and textile upper gives a soft, supple feel. Theyre built for comfort with a padded collar and rubber cupsole.',
-            img: '/images/Americana_Hi_Shoes_White_EF2803_01_standard.png'
-        }
-    }
-    res.render('product', context);
+app.get('/product/:name/:id', function (req, res) {
+
+    var id = parseInt(req.params.id);
+    var product = listproducts[id];
+    res.render('product', product);
+});
+
+app.listen(3000, function () {
+    console.log('servidor iniciado en puerto 3000');
 });
 
 /*app.get('/', function (req, res) {
     console.log('hola desde la consola');
     res.sendFile(path.join(__dirname, '/public/index.html'));
 }); */
-
-app.listen(3000, function () {
-    console.log('servidor iniciado en puerto 3000');
-});
 

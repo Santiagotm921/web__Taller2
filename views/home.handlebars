@@ -53,14 +53,21 @@
             <div class="screen">
 
                 <article class="screen__losmoldes">
-                    <div class=" screen__molde"></div>
+
+                    
+                        <div class=" screen__molde"></div>
+                   
+                    
                     <div class=" screen__molde--info"></div>
                 </article>
 
 
                 <section class="screen__info">
                     <img class="screen__product" src="{{img}}" alt="imageProduct">
-                    <h3>{{ name }}</h3>
+
+                    <a href="/product/{{ name }}/{{ @index }}">
+                        <h3>{{ name }}</h3>
+                    </a>
 
                     <article class="screen__mybtn">
                         <button class="screen__btn">
@@ -74,12 +81,13 @@
                     <span>{{ price }}$</span>
 
                     {{!--
-                <span>{{ rating }}</span>
-                <span>{{ type }}</span>
-                <span>{{ gender }}</span>
-                <span>{{ color }}</span> 
-                --}}
+                        <span>{{ rating }}</span>
+                        <span>{{ type }}</span>
+                        <span>{{ gender }}</span>
+                        <span>{{ color }}</span> 
+                        --}}
                 </section>
+
 
             </div>
 
