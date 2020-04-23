@@ -38,6 +38,8 @@ html, button, select {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 14px;
+  position: fixed;
+  width: 100%;
 }
 
 .menu__logo {
@@ -244,16 +246,10 @@ html, button, select {
 }
 
 .filter__colors {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
   height: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 0px 0px 0px 5px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .filter__colors button {
@@ -285,6 +281,20 @@ html, button, select {
 
 .filter__colors--blue {
   background: rgba(0, 140, 255, 0.986);
+}
+
+.filter__colors--rose {
+  background: rgba(219, 68, 207, 0.986);
+}
+
+.filter__colors--brown {
+  background: rgba(182, 93, 9, 0.986);
+}
+
+@media (max-width: 930px) {
+  .filter .filter__colors--white {
+    border: 2px solid #2dbbd6;
+  }
 }
 
 .products {
@@ -450,6 +460,18 @@ html, button, select {
   position: absolute;
 }
 
+@media (max-width: 930px) {
+  .filter {
+    display: none;
+  }
+  .order {
+    display: none;
+  }
+  .listProducts {
+    width: 100%;
+  }
+}
+
 .myfoot {
   width: 100%;
 }
@@ -580,5 +602,55 @@ html, button, select {
 
 .content__titles h1 {
   font-size: 36px;
+}
+
+.flexSearch {
+  display: none;
+  width: 75%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.flexSearch button {
+  background: none;
+  border: 2.3px solid #20b3d2;
+  width: 40%;
+  color: #20b3d2;
+}
+
+.filter--flex {
+  position: absolute;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 2;
+  height: auto;
+  border-radius: 0px;
+  width: 22%;
+  background: white;
+  margin: 75px 0px 0px 5%;
+  -webkit-box-shadow: 10px 15px 7px -10px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 15px 7px -10px rgba(0, 0, 0, 0.3);
+}
+
+.filter--flex h4 {
+  display: none;
+}
+
+.filter--flex a {
+  color: #20b3d2;
+}
+
+@media (max-width: 930px) {
+  .flexSearch {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -62,7 +62,7 @@ var products = [
         rating: 4.7,
         type: 'Athletics',
         gender: ['women'],
-        color: 'brown',
+        color: 'rose',
         img: '/images/Athletics/Ultraboost_20_Shoes_Pink_EG0725_01_standard.png',
         background: 'linear-gradient(318deg, rgba(204,181,183) 0%, rgba(255,138,150) 95%);'
     },

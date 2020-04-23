@@ -1,0 +1,43 @@
+.flexSearch {
+    display: none;
+    width: 75%;
+    justify-content: space-evenly;
+
+    button {
+        background: none;
+        border: 2.3px solid rgb(32, 179, 210);
+        width: 40%;
+        color: rgb(32, 179, 210);
+    }
+}
+
+.filter {
+    &--flex {
+        position: absolute;
+        display: flex !important;
+        flex-direction: column;
+        z-index: 2;
+        height: auto;
+        border-radius: 0px;
+        width: 22%;
+        background: white;
+        margin: 75px 0px 0px 5%;
+        box-shadow: 10px 15px 7px -10px rgba(0, 0, 0, 0.3);
+
+        h4 {
+            display: none;
+        }
+
+        .filter__colors {
+        }
+        a {
+            color: rgb(32, 179, 210);
+        }
+    }
+}
+
+@media (max-width: 930px) {
+    .flexSearch {
+        display: flex;
+    }
+}
