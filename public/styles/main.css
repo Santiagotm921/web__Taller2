@@ -549,7 +549,6 @@ html, button, select {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  background: rosybrown;
   padding-top: 80px;
 }
 
