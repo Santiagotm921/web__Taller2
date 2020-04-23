@@ -3,11 +3,18 @@
     width: 75%;
     justify-content: space-evenly;
 
-    button {
+    &__filter,
+    &__order {
         background: none;
         border: 2.3px solid rgb(32, 179, 210);
         width: 40%;
+        height: 40px;
         color: rgb(32, 179, 210);
+
+        &--active {
+            background: rgb(32, 179, 210);
+            color: white;
+        }
     }
 }
 
@@ -21,15 +28,36 @@
         border-radius: 0px;
         width: 22%;
         background: white;
-        margin: 75px 0px 0px 5%;
+        margin: 111px 0px 0px 5%;
         box-shadow: 10px 15px 7px -10px rgba(0, 0, 0, 0.3);
 
         h4 {
             display: none;
         }
 
-        .filter__colors {
+        a {
+            color: rgb(32, 179, 210);
         }
+    }
+}
+
+.order {
+    &--flex {
+        position: absolute;
+        display: flex !important;
+        flex-direction: column;
+        z-index: 2;
+        height: auto;
+        border-radius: 0px;
+        width: 30%;
+        background: white;
+        margin: 1px 0px 0px 38%;
+        box-shadow: 10px 15px 7px -10px rgba(0, 0, 0, 0.3);
+
+        h4 {
+            display: none;
+        }
+
         a {
             color: rgb(32, 179, 210);
         }

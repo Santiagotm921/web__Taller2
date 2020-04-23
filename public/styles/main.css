@@ -322,6 +322,7 @@ html, button, select {
 .listProducts h2 {
   color: #20b3d2;
   margin: 20px 0px 0px 0px;
+  padding: 0px 22px;
 }
 
 .listProducts__myproducts {
@@ -470,6 +471,9 @@ html, button, select {
   .listProducts {
     width: 100%;
   }
+  .listProducts h2 {
+    padding: 0px 0px 22px 22px;
+  }
 }
 
 .myfoot {
@@ -588,7 +592,7 @@ html, button, select {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin: -145px 0px 0px 40px;
+  margin: -135px 0px 0px 0px;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
 }
@@ -601,7 +605,21 @@ html, button, select {
 }
 
 .content__titles h1 {
+  margin: 0px;
   font-size: 36px;
+}
+
+@media (max-width: 930px) {
+  .content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .content__shoe img {
+    margin: -135px 0px 0px 40px;
+  }
+  .content__titles {
+    width: 100%;
+  }
 }
 
 .flexSearch {
@@ -612,11 +630,17 @@ html, button, select {
           justify-content: space-evenly;
 }
 
-.flexSearch button {
+.flexSearch__filter, .flexSearch__order {
   background: none;
   border: 2.3px solid #20b3d2;
   width: 40%;
+  height: 40px;
   color: #20b3d2;
+}
+
+.flexSearch__filter--active, .flexSearch__order--active {
+  background: #20b3d2;
+  color: white;
 }
 
 .filter--flex {
@@ -633,7 +657,7 @@ html, button, select {
   border-radius: 0px;
   width: 22%;
   background: white;
-  margin: 75px 0px 0px 5%;
+  margin: 111px 0px 0px 5%;
   -webkit-box-shadow: 10px 15px 7px -10px rgba(0, 0, 0, 0.3);
           box-shadow: 10px 15px 7px -10px rgba(0, 0, 0, 0.3);
 }
@@ -643,6 +667,33 @@ html, button, select {
 }
 
 .filter--flex a {
+  color: #20b3d2;
+}
+
+.order--flex {
+  position: absolute;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 2;
+  height: auto;
+  border-radius: 0px;
+  width: 30%;
+  background: white;
+  margin: 1px 0px 0px 38%;
+  -webkit-box-shadow: 10px 15px 7px -10px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 15px 7px -10px rgba(0, 0, 0, 0.3);
+}
+
+.order--flex h4 {
+  display: none;
+}
+
+.order--flex a {
   color: #20b3d2;
 }
 

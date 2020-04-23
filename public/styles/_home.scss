@@ -116,6 +116,7 @@
     h2 {
         color: rgb(32, 179, 210);
         margin: 20px 0px 0px 0px;
+        padding: 0px 22px;
     }
     &__myproducts {
         display: flex;
@@ -235,5 +236,9 @@
     }
     .listProducts {
         width: 100%;
+
+        h2 {
+            padding: 0px 0px 22px 22px;
+        }
     }
 }

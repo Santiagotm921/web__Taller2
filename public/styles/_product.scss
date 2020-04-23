@@ -12,7 +12,7 @@
         img {
             display: flex;
             width: 100%;
-            margin: -145px 0px 0px 40px;
+            margin: -135px 0px 0px 0px;
             transform: rotate(20deg);
         }
     }
@@ -24,7 +24,24 @@
         color: white;
 
         h1 {
+            margin: 0px;
             font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 930px) {
+    .content {
+        flex-wrap: wrap;
+
+        &__shoe {
+            img {
+                margin: -135px 0px 0px 40px;
+            }
+        }
+
+        &__titles {
+            width: 100%;
         }
     }
 }
