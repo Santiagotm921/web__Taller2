@@ -363,8 +363,23 @@ html, button, select {
 
 .screen h3 {
   margin: 0px;
-  padding: 0px 15px;
   text-align: center;
+  padding: 0px 15px 12px;
+}
+
+.screen__stars {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 12px 0px;
+}
+
+.screen__rating {
+  width: 70%;
 }
 
 .screen__product {
@@ -387,6 +402,9 @@ html, button, select {
           flex-direction: column;
   position: relative;
   color: #20b3d2;
+  /*nav {
+            margin: -20px 0px 0px 0px;
+        }*/
 }
 
 .screen__info span {
@@ -591,22 +609,48 @@ html, button, select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  margin: -135px 0px 0px 0px;
+  width: 82%;
+  margin: -135px 0px 0px -45px;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
 }
 
 .content__titles {
-  width: 60%;
+  width: 50%;
   text-align: right;
-  margin: 0px 40px 0px 0px;
+  margin: 0px 0px 0px 49%;
   color: white;
+  position: absolute;
+  padding: 45px 0px;
+}
+
+.content__titles p {
+  font-size: 14px;
+}
+
+.content__titles span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.content__titles span img {
+  width: 150px;
 }
 
 .content__titles h1 {
   margin: 0px;
-  font-size: 36px;
+  font-size: 40px;
+}
+
+.content__titles h4 {
+  margin: 0px 15px;
 }
 
 @media (max-width: 930px) {
@@ -614,11 +658,17 @@ html, button, select {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .content__shoe {
+    width: 100%;
+  }
   .content__shoe img {
     margin: -135px 0px 0px 40px;
   }
   .content__titles {
     width: 100%;
+    position: relative;
+    text-align: left;
+    padding: 0px;
   }
 }
 

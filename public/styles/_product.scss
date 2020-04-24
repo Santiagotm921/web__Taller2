@@ -11,21 +11,40 @@
 
         img {
             display: flex;
-            width: 100%;
-            margin: -135px 0px 0px 0px;
+            width: 82%;
+            margin: -135px 0px 0px -45px;
             transform: rotate(20deg);
         }
     }
 
     &__titles {
-        width: 60%;
+        width: 50%;
         text-align: right;
-        margin: 0px 40px 0px 0px;
+        margin: 0px 0px 0px 49%;
         color: white;
+        position: absolute;
+        padding: 45px 0px;
+
+        p {
+            font-size: 14px;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            img {
+                width: 150px;
+            }
+        }
 
         h1 {
             margin: 0px;
-            font-size: 36px;
+            font-size: 40px;
+        }
+
+        h4 {
+            margin: 0px 15px;
         }
     }
 }
@@ -35,6 +54,8 @@
         flex-wrap: wrap;
 
         &__shoe {
+            width: 100%;
+
             img {
                 margin: -135px 0px 0px 40px;
             }
@@ -42,6 +63,9 @@
 
         &__titles {
             width: 100%;
+            position: relative;
+            text-align: left;
+            padding: 0px;
         }
     }
 }

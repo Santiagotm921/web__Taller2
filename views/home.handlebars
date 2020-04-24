@@ -17,7 +17,6 @@
             <h4>GENDER</h4>
             <li><a href="">Men</a></li>
             <li><a href="">Women</a></li>
-            <li><a href="">Kids</a></li>
         </ul>
 
         <h4>COLOR</h4>
@@ -49,11 +48,11 @@
         </article>
 
         <div class="order">
-            <p><strong>POPULAR</strong></p>
-            <p><strong>NEW SHOES</strong></p>
+            <p><strong>Popular</strong></p>
+            <p><strong>New shoes</strong></p>
             <select>
-                <option value=""><strong>PRICE: LOW TO HIGH</strong></option>
-                <option value=""><strong>PRICE: HIGH TO LOW</strong></option>
+                <option value=""><strong>Price: Low to high</strong></option>
+                <option value=""><strong>Price: Hig to low</strong></option>
             </select>
         </div>
 
@@ -71,18 +70,24 @@
                 <section class="screen__info">
                     <img class="screen__product" src="{{img}}" alt="imageProduct">
 
-                    <a href="/product/{{ name }}/{{ @index }}">
-                        <h3>{{ name }}</h3>
-                    </a>
+                    <nav>
+                        <div class="screen__stars">
+                            <img class="screen__rating" src="{{ imgrating }}" alt="rating">
+                        </div>
 
-                    <article class="screen__mybtn">
-                        <button class="screen__btn">
-                            <div class="screen__btn__container">
-                                <p class="screen__btn--span">Add to cart</p>
-                                <img class="screen__btn--cart" src="/images/cart.png" alt="">
-                            </div>
-                        </button>
-                    </article>
+                        <a href="/product/{{ name }}/{{ @index }}">
+                            <h3>{{ name }}</h3>
+                        </a>
+
+                        <article class="screen__mybtn">
+                            <button class="screen__btn">
+                                <div class="screen__btn__container">
+                                    <p class="screen__btn--span">Add to cart</p>
+                                    <img class="screen__btn--cart" src="/images/cart.png" alt="">
+                                </div>
+                            </button>
+                        </article>
+                    </nav>
 
                     <span>{{ price }}$</span>
 
