@@ -663,12 +663,20 @@ html, button, select {
   }
   .content__shoe img {
     margin: -135px 0px 0px 40px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   .content__titles {
     width: 100%;
     position: relative;
     text-align: left;
     padding: 0px;
+    margin: -20% 25px 0px 25px;
+  }
+  .content__titles span {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
   }
 }
 
