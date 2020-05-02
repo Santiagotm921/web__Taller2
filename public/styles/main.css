@@ -415,6 +415,7 @@ html, button, select {
 
 .screen__info h3 {
   text-decoration: none;
+  color: #20b3d2;
 }
 
 .screen__mybtn {
@@ -477,6 +478,7 @@ html, button, select {
   height: 100%;
   border-radius: 10px;
   position: absolute;
+  padding: 0px 0px 7px;
 }
 
 @media (max-width: 930px) {
@@ -613,6 +615,7 @@ html, button, select {
   margin: -135px 0px 0px -45px;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
+  min-width: 300px;
 }
 
 .content__titles {
@@ -653,6 +656,38 @@ html, button, select {
   margin: 0px 15px;
 }
 
+.content__btn {
+  border: 3px solid white;
+  border-radius: 25px;
+  background: none;
+  color: white;
+  width: 180px;
+}
+
+.content__btn:hover {
+  background: black;
+  border: none;
+}
+
+.content__mybtn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  pointer-events: none;
+}
+
+.content__mybtn img {
+  width: 15%;
+  margin: 5px;
+}
+
 @media (max-width: 930px) {
   .content {
     -ms-flex-wrap: wrap;
@@ -662,7 +697,7 @@ html, button, select {
     width: 100%;
   }
   .content__shoe img {
-    margin: -135px 0px 0px 40px;
+    margin: -22% 0px 0px 40px;
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
@@ -671,7 +706,7 @@ html, button, select {
     position: relative;
     text-align: left;
     padding: 0px;
-    margin: -20% 25px 0px 25px;
+    margin: -15% 25px 40px 25px;
   }
   .content__titles span {
     -webkit-box-pack: right;

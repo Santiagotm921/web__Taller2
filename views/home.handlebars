@@ -58,7 +58,7 @@
 
 
         <section class="listProducts__myproducts">
-            {{#each listproducts}}
+            {{#each products}}
 
             <div class="screen">
 
@@ -75,7 +75,7 @@
                             <img class="screen__rating" src="{{ imgrating }}" alt="rating">
                         </div>
 
-                        <a href="/product/{{ name }}/{{ @index }}">
+                        <a href="/product/{{ name }}/{{ _id }}">
                             <h3>{{ name }}</h3>
                         </a>
 
