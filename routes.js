@@ -11,9 +11,8 @@ function configureRoutes(app, db) {
                 $eq: new ObjectId(req.params.id)
             }
         }
-  // Get the documents collection
+
         const collection = db.collection('products');
-        // Find some documents
         collection.find(filter).toArray(function (err, docs) {
             assert.equal(err, null);
 
@@ -21,14 +20,10 @@ function configureRoutes(app, db) {
                 res.redirect('/404');
             }
 
-            // crear el contexto
             var context = docs[0];
-            // renderizar el archivo list.handlebars con el contexto creado
             res.render('product', context);
         });
     });
-
-
 
     app.get('/', function (req, res) {
 
@@ -50,10 +45,20 @@ function configureRoutes(app, db) {
         console.log('servidor iniciado en puerto 3000');
     });
 
-    /*app.get('/', function (req, res) {
-        console.log('hola desde la consola');
-        res.sendFile(path.join(__dirname, '/public/index.html'));
-    }); */
+    app.get('/index.handlebars', function (req, res) {
+        const collection = db.collection('index');
+        collection.find().toArray(function (err, docs) {
+            assert.equal(err, null);
+
+            var context = {
+                products: docs
+            }
+
+            res.render('index', context);
+
+        });
+
+    });
 }
 
 module.exports = configureRoutes;

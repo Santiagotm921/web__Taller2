@@ -1,0 +1,96 @@
+$myRed: #aa0400;
+$myYellow: #f9be24;
+$myRose: #da0072;
+
+.characteristics {
+  background: $myRed;
+  display: flex;
+
+  &__shoe {
+    display: flex;
+    position: relative;
+    max-width: 70%;
+    min-width: 30%;
+    top: -1px;
+  }
+
+  &__shoe--white {
+    display: none;
+  }
+
+  &__shoe--black {
+    display: none;
+  }
+
+  &__shoe--yellow {
+    display: none;
+  }
+
+  &__shoe--rose {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.6em;
+    color: white;
+  }
+
+  span {
+    text-align: right;
+    padding: 10px;
+    width: 30%;
+  }
+
+  li {
+    margin-bottom: 15px;
+    color: white;
+  }
+
+  &__texts {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  &__texts2 {
+    margin-top: 117px;
+  }
+
+  &--white {
+    background: $myRed;
+  }
+
+  &--black {
+    background: black;
+  }
+
+  &--yellow {
+    background: $myYellow;
+  }
+
+  &--rose {
+    background: $myRose;
+  }
+}
+
+@media (max-width: 930px) {
+  .characteristics {
+    &__shoe {
+      display: none !important;
+    }
+
+    span {
+      width: 100%;
+      margin: 10px;
+    }
+
+    &__texts {
+      margin-top: 0px;
+    }
+
+    &__li {
+      text-align: right;
+      column-count: 2;
+      column-gap: 3px;
+    }
+  }
+}

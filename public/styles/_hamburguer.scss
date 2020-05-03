@@ -1,0 +1,80 @@
+$myRed: #aa0400;
+$breakpoint-sm: 930px;
+$myYellow: #f9be24;
+$myRose: #da0072;
+
+.mainnav {
+  display: flex;
+  padding: 10px;
+  margin: 0px 20px;
+
+  &--mobile {
+    position: absolute;
+    display: flex !important;
+    flex-direction: column;
+    background: black;
+    top: 68px;
+    left: -30px;
+    width: 50%;
+  }
+
+  &__link {
+    padding: 5px 7px;
+  }
+
+  &__search {
+    margin-left: auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    margin: 0px 8px;
+  }
+
+  a:hover {
+    background: black;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    display: none;
+
+    a:hover {
+      background: $myRed;
+    }
+
+    .mainnav--yellow {
+      background: black;
+    }
+
+    .mainnav--rose {
+      background: black;
+    }
+  }
+}
+
+.mainnav--white {
+  background: $myRed;
+}
+
+.hamburguerbtn {
+  background: none;
+  width: 50px;
+  height: 41px;
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+  border: none;
+  align-items: stretch;
+  outline: none;
+
+  span {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+  }
+  @media (max-width: $breakpoint-sm) {
+    display: flex;
+  }
+}

@@ -15,6 +15,11 @@ function handleWindowResize(event) {
 }
 window.addEventListener('resize', handleWindowResize);
 
+/*
+if () {
+
+} */
+
 
 window.addEventListener('scroll', event => {
     var y = window.scrollY

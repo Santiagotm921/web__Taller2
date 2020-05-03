@@ -1,0 +1,150 @@
+$myRed: #aa0400;
+
+.changeColor {
+  display: flex;
+  background: white;
+
+  &__shoe {
+    width: 45%;
+    position: relative;
+    max-width: 70%;
+    min-width: 60%;
+    margin-top: -70px;
+  }
+
+  &__shoe--yellow {
+    display: none;
+    width: 45%;
+    position: relative;
+    max-width: 70%;
+    min-width: 60%;
+    margin-top: -70px;
+  }
+
+  &__shoe--rose {
+    display: none;
+    width: 45%;
+    position: relative;
+    max-width: 70%;
+    min-width: 60%;
+    margin-top: -70px;
+  }
+
+  &__shoe--black {
+    display: none;
+    width: 45%;
+    position: relative;
+    max-width: 70%;
+    min-width: 60%;
+    margin-top: -70px;
+  }
+
+  &__shoe--white {
+    display: none;
+    width: 45%;
+    position: relative;
+    max-width: 70%;
+    min-width: 60%;
+    margin-top: -70px;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__edits {
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        outline: none;
+      }
+
+      &--red {
+        display: flex;
+        background-color: $myRed;
+        border: solid 0px;
+      }
+
+      &--white {
+        display: flex;
+        background-color: white;
+        border: solid black 1px;
+      }
+
+      &--black {
+        display: flex;
+        background-color: black;
+        border: solid white 1px;
+      }
+
+      &--yellow {
+        display: flex;
+        background-color: #f9be24;
+        border: solid 0px;
+      }
+
+      &--rose {
+        display: flex;
+        background-color: #da0072;
+        border: solid 0px;
+      }
+    }
+  }
+
+  &__texts {
+    width: 50%;
+    text-align: right;
+    padding: 20px;
+
+    p {
+      color: black;
+    }
+
+    h1 {
+      color: $myRed;
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.changeColor--black {
+  background: black;
+
+  .changeColor__texts {
+    p {
+      color: white;
+    }
+
+    h3 {
+      color: white;
+    }
+
+    button {
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .changeColor__container {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+      justify-content: center;
+    }
+  }
+
+  .changeColor__texts {
+    text-align: center;
+    margin-top: -60px;
+    width: 85%;
+  }
+}

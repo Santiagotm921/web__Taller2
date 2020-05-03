@@ -1,0 +1,32 @@
+$breakpoint-sm: 930px;
+
+.videos {
+  iframe {
+    width: 100%;
+    min-width: 10px;
+    height: 600px;
+    margin-bottom: 15px;
+  }
+
+  &__images {
+    width: 100%;
+  }
+}
+
+.myvideos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-between;
+}
+
+img {
+  max-width: 100%;
+  min-width: 10%;
+}
+
+@media (max-width: $breakpoint-sm) {
+  .myvideos {
+    display: none;
+  }
+}
