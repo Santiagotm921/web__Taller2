@@ -123,7 +123,7 @@ var products = [
         name: 'TERREX FREE',
         price: 130,
         rating: 4,
-        type: 'Sport shoe',
+        type: 'Boots',
         gender: ['women'],
         color: 'brown',
         img: '/images/Boots/Terrex_Free_Hiker_Hiking_Shoes_Brown_G28416_01_standard.png',

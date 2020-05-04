@@ -10,7 +10,7 @@ function configureRoutes(app, db) {
             _id: {
                 $eq: new ObjectId(req.params.id)
             }
-        }
+        };
 
         const collection = db.collection('products');
         collection.find(filter).toArray(function (err, docs) {
@@ -19,18 +19,33 @@ function configureRoutes(app, db) {
             if (docs.length == 0) {
                 res.redirect('/404');
             }
-
             var context = docs[0];
             res.render('product', context);
         });
     });
 
     app.get('/', function (req, res) {
+        console.log(req.query.type_)
+
+        var filters = {
+            $and: []
+        };
+
+        if (req.query.type_) {
+            filters.$and.push({
+                type: {
+                    $eq: (req.query.type_)
+                }
+            });
+        }
+
+        if (filters.$and.length === 0) {
+            delete filters.$and;
+        }
 
         const collection = db.collection('products');
-        collection.find({}).toArray(function (err, docs) {
+        collection.find(filters).toArray(function (err, docs) {
             assert.equal(err, null);
-            console.log(docs);
 
             var context = {
                 products: docs
@@ -39,6 +54,7 @@ function configureRoutes(app, db) {
             res.render('home', context);
 
         });
+
     });
 
     app.listen(3000, function () {
