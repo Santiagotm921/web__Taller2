@@ -25,7 +25,6 @@ function configureRoutes(app, db) {
     });
 
     app.get('/', function (req, res) {
-        console.log(req.query.type_)
 
         var filters = {
             $and: []
@@ -39,12 +38,46 @@ function configureRoutes(app, db) {
             });
         }
 
+        if (req.query.gender_) {
+            filters.$and.push({
+                gender: {
+                    $eq: (req.query.gender_)
+                }
+            });
+        }
+
+        if (req.query.color_) {
+            filters.$and.push({
+                color: {
+                    $eq: (req.query.color_)
+                }
+            });
+        }
+
         if (filters.$and.length === 0) {
             delete filters.$and;
         }
 
+        var sortings = {};
+        if (req.query.sort == 'price_desc') {
+            sortings.price = 1;
+        }
+
+        if (req.query.sort == 'price_asc') {
+            sortings.price = -1;
+        }
+
+        if (req.query.sort == 'rating') {
+            sortings.rating = -1;
+        }
+
+        if (req.query.sort == 'ne') {
+            sortings.id = 1;
+        }
+
+
         const collection = db.collection('products');
-        collection.find(filters).toArray(function (err, docs) {
+        collection.find(filters).sort(sortings).toArray(function (err, docs) {
             assert.equal(err, null);
 
             var context = {
