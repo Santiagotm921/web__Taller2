@@ -8,11 +8,14 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+
 const configureRoutes = require('./routes');
 
 app.engine('handlebars', exphbs()); //Todos los archivos handlebars, los va a renderizar usando exphbs
 app.set('view engine', 'handlebars'); //usar el motor de render Handlebars
 app.use(express.static('public')); //static hace que la carpeta public sea PUBLICA (NO QUITAR)
+
 
 // Use connect method to connect to the Server
 client.connect(function (err) {
@@ -21,7 +24,7 @@ client.connect(function (err) {
 
     const db = client.db(dbName);
 
-   configureRoutes(app, db);
+    configureRoutes(app, db);
 
 });
 

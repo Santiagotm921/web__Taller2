@@ -1,0 +1,60 @@
+{{#if showError}}
+<section>
+    <h3>Error!</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eligendi officia odit obcaecati recusandae saepe
+        pariatur eaque minima ipsum odio, aliquam error repudiandae reprehenderit, ullam soluta doloremque quisquam
+        possimus
+        mollitia.</p>
+</section>
+{{/if}}
+
+<article class="thecheckout">
+
+    <section class="orders">
+        <h3>YOUR SHOPPING CART</h3>
+    </section>
+
+    <form class="checkout" action="/checkout" method="POST">
+        <div class="checkout__carddetails">
+            <h3>CARD DETAILS</h3>
+            <img src="/images/cart.png" alt="cart" srcset="">
+        </div>
+
+        <article class="checkout__cards">
+            Select Card Type
+            <div class="checkout__container">
+                <img src="/images/src/visa.png" alt="">
+                <img src="/images/src/mastercard-logo-white.png" alt="">
+                <img src="/images/src/paypal.png" alt="">
+            </div>
+        </article>
+
+        <label>
+            Name
+            <input name="firstname" required="true">
+        </label>
+        <label>
+            Card number
+            <input name="Card number" required="true">
+        </label>
+
+        <div class="btngroup">
+            <input name="payment_type" type="hidden">
+            <div class="btngroup__item">
+                Visa
+            </div>
+            <div class="btngroup__item">
+                Master Card
+            </div>
+            <div class="btngroup__item">
+                asdasdas
+            </div>
+            <div class="btngroup__item">
+                6a5656
+            </div>
+        </div>
+
+        <button>Send</button>
+    </form>
+
+</article>

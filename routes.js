@@ -75,7 +75,6 @@ function configureRoutes(app, db) {
             sortings.id = 1;
         }
 
-
         const collection = db.collection('products');
         collection.find(filters).sort(sortings).toArray(function (err, docs) {
             assert.equal(err, null);
@@ -83,9 +82,7 @@ function configureRoutes(app, db) {
             var context = {
                 products: docs
             }
-
             res.render('home', context);
-
         });
 
     });
@@ -102,11 +99,41 @@ function configureRoutes(app, db) {
             var context = {
                 products: docs
             }
-
             res.render('index', context);
-
         });
+    });
 
+    // mostrar el formulario al usuario
+    app.get('/checkout', function (req, res) {
+        console.log(req.query.error);
+        var context = {
+            showError: req.query.error,
+        }
+        res.render('checkout', context);
+    });
+
+    // recibir información del usuario
+    app.post('/checkout', function (req, res) {
+        console.log(req.body);
+
+        var { firstname, Cardnumber } = req.body;
+
+        req.body.creation_date = new Date();
+
+        if (!firstname || !Cardnumber) {
+            //res.send('error');
+            res.redirect('/checkout?error=true');
+            return;
+        }
+
+        const collection = db.collection('orders');
+        collection.insertOne(req.body);
+        //res.send('test');
+        res.redirect('/confirmation');
+    });
+
+    app.get('/confirmation', function (req, res) {
+        res.send('gracias por tu compra');
     });
 }
 
