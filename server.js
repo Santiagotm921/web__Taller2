@@ -16,7 +16,6 @@ app.engine('handlebars', exphbs()); //Todos los archivos handlebars, los va a re
 app.set('view engine', 'handlebars'); //usar el motor de render Handlebars
 app.use(express.static('public')); //static hace que la carpeta public sea PUBLICA (NO QUITAR)
 
-
 // Use connect method to connect to the Server
 client.connect(function (err) {
     assert.equal(null, err);

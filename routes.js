@@ -75,6 +75,7 @@ function configureRoutes(app, db) {
             sortings.id = 1;
         }
 
+
         const collection = db.collection('products');
         collection.find(filters).sort(sortings).toArray(function (err, docs) {
             assert.equal(err, null);
@@ -82,7 +83,9 @@ function configureRoutes(app, db) {
             var context = {
                 products: docs
             }
+
             res.render('home', context);
+
         });
 
     });
@@ -99,14 +102,19 @@ function configureRoutes(app, db) {
             var context = {
                 products: docs
             }
+
             res.render('index', context);
+
         });
+
     });
 
     // mostrar el formulario al usuario
     app.get('/checkout', function (req, res) {
         console.log(req.query.error);
         var context = {
+            hide_header: true,
+            hide_footer: true,
             showError: req.query.error,
         }
         res.render('checkout', context);
@@ -116,11 +124,11 @@ function configureRoutes(app, db) {
     app.post('/checkout', function (req, res) {
         console.log(req.body);
 
-        var { firstname, Cardnumber } = req.body;
+        var { firstname, cardnumber } = req.body;
 
         req.body.creation_date = new Date();
 
-        if (!firstname || !Cardnumber) {
+        if (!firstname || !cardnumber) {
             //res.send('error');
             res.redirect('/checkout?error=true');
             return;
@@ -133,8 +141,19 @@ function configureRoutes(app, db) {
     });
 
     app.get('/confirmation', function (req, res) {
-        res.send('gracias por tu compra');
+        const collection = db.collection('confirmation');
+        collection.find().toArray(function (err, docs) {
+            assert.equal(err, null);
+
+            var context = {
+                products: docs
+            }
+
+            res.render('confirmation', context);
+
+        });
     });
+
 }
 
 module.exports = configureRoutes;

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700&display=swap" rel="stylesheet">
 </head>
 
+{{#unless hide_header}}
 <header class="menu">
 
     <section class="menu__container">
@@ -40,11 +41,15 @@
 
 </header>
 
+{{/unless}}
+
 <body>
 
     {{{ body }}}
 
 </body>
+
+{{#unless hide_footer}}
 
 <footer>
     <div class="space">
@@ -121,11 +126,9 @@
     </section>
 </footer>
 
-<script src="/scripts/hambur.js"></script>
-<script src="/scripts/filters.js"></script>
-<script src="./scripts/changeColor.js"></script>
-<script src="./scripts/changeImg.js"></script>
-<script src="./scripts/modal.js"></script>
+{{/unless}}
+
 <script src="./scripts/client.js"></script>
+<script src="/scripts/hambur.js"></script>
 
 </html>

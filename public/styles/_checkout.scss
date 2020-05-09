@@ -1,0 +1,92 @@
+.thecheckout {
+    display: flex;
+}
+
+.orders {
+    width: 75%;
+
+    h3 {
+        color: rgb(32, 179, 210);
+    }
+}
+
+.checkout {
+    background: linear-gradient(318deg, rgba(32, 179, 210, 1) 0%, rgba(94, 220, 228, 1) 95%);
+    width: 25%;
+    color: white;
+    padding: 35px;
+    font-size: 15px;
+    min-height: 100vh;
+
+    input {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    &__carddetails {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h3 {
+            margin: 20px 0px;
+            font-size: 20px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        margin: 35px 0px;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        img {
+            width: 30%;
+        }
+    }
+
+    &__container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin: 10px 0px;
+
+        img {
+            width: 30%;
+            margin: 10px 0px;
+        }
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px;
+    }
+
+    input {
+        background: none;
+        border: none;
+        border-bottom: 2px solid white;
+        margin: 10px 0px;
+    }
+
+    &__btn {
+        width: 100%;
+        color: white;
+        background: black;
+        border: none;
+        height: 60px;
+        margin: 10px 0px;
+    }
+}
+
+.btngroup__item {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+}

@@ -127,5 +127,3 @@ ne.addEventListener('click', function (event) {
     url = url + '?sort=ne';
     location.href = url;
 });
-
-
