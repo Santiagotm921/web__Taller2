@@ -205,6 +205,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            pointer-events: none;
         }
 
         &--span {
@@ -212,9 +213,11 @@
             display: inline;
             margin: 0px 10px;
             font-size: 11px;
+            pointer-events: none;
         }
         &--cart {
             width: 15%;
+            pointer-events: none;
         }
     }
 

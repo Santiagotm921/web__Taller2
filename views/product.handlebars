@@ -13,12 +13,15 @@
         <h3> {{subtitle}} </h3>
         <p> {{description}}</p>
 
-        <button class="content__btn">
+        <button class="screen__btn" data-img="{{ img }}" data-name="{{ name }}" data-price="{{ price }}"
+            data-id="{{ _id }}">
+
             <div class="content__mybtn">
                 Add to cart
                 <img src="/images/cart.png" alt="">
             </div>
-            
+
+
         </button>
 
     </article>

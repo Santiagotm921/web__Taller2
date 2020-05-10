@@ -78,7 +78,9 @@
                         </a>
 
                         <article class="screen__mybtn">
-                            <button class="screen__btn">
+                            <button class="screen__btn" data-name="{{name}}" data-rating="{{imgrating}}"
+                                data-img="{{img}}" data-price="{{price}}" data-id="{{_id}}">
+
                                 <div class="screen__btn__container">
                                     <p class="screen__btn--span">Add to cart</p>
                                     <img class="screen__btn--cart" src="/images/cart.png" alt="">
@@ -107,3 +109,5 @@
     </article>
 
 </section>
+
+<script src="./scripts/client.js"></script>

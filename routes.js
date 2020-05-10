@@ -102,11 +102,8 @@ function configureRoutes(app, db) {
             var context = {
                 products: docs
             }
-
             res.render('index', context);
-
         });
-
     });
 
     // mostrar el formulario al usuario
@@ -146,7 +143,8 @@ function configureRoutes(app, db) {
             assert.equal(err, null);
 
             var context = {
-                products: docs
+                products: docs,
+                hide_footer: true,
             }
 
             res.render('confirmation', context);

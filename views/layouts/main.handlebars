@@ -26,14 +26,17 @@
                 <a class="mainnav__link" href="/"> <strong>HOME</strong> </a>
                 <a class="mainnav__link" href="#"> <strong>MEN</strong> </a>
                 <a class="mainnav__link" href="#"> <strong>WOMEN</strong> </a>
-                <a class="mainnav__link" href="/index.handlebars"> <strong>PREDATOR</strong> </a>
+                <a class="mainnav__link" href="/index"> <strong>PREDATOR</strong> </a>
                 <a class="mainnav__link" href="#"> SPORTS </a>
                 <a class="mainnav__link" href="#"> BRANDS </a>
             </nav>
         </div>
 
         <div class="cart">
-            <img class="menu__mycart" src="/images/cart.png" alt="cart">
+            <a href="/checkout">
+                <img class="menu__mycart" src="/images/cart.png" alt="cart">
+            </a>
+            <button class="cart__btn">0</button>
             <p>EN</p>
         </div>
 
@@ -128,7 +131,7 @@
 
 {{/unless}}
 
-<script src="./scripts/client.js"></script>
 <script src="/scripts/hambur.js"></script>
+<script src="/scripts/cart.js"></script>
 
 </html>

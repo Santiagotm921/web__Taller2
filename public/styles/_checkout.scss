@@ -1,9 +1,16 @@
 .thecheckout {
     display: flex;
+
+    &__logo {
+        position: absolute;
+        width: 100%;
+        pointer-events: none;
+    }
 }
 
 .orders {
     width: 75%;
+    padding: 0px 35px;
 
     h3 {
         color: rgb(32, 179, 210);
@@ -11,12 +18,12 @@
 }
 
 .checkout {
+    background: rgb(32, 179, 210);
     background: linear-gradient(318deg, rgba(32, 179, 210, 1) 0%, rgba(94, 220, 228, 1) 95%);
     width: 25%;
     color: white;
     padding: 35px;
     font-size: 15px;
-    min-height: 100vh;
 
     input {
         color: white;
@@ -29,7 +36,7 @@
         justify-content: space-between;
 
         h3 {
-            margin: 20px 0px;
+            margin: 0;
             font-size: 20px;
         }
     }
@@ -89,4 +96,28 @@
     display: flex;
     flex-direction: column;
     margin: 15px 0px;
+}
+
+@media (max-width: 600px) {
+    .thecheckout {
+        flex-direction: column;
+
+        &__logo {
+            display: none;
+        }
+    }
+
+    .order {
+        width: 100%;
+    }
+
+    .checkout {
+        width: auto;
+
+        &__carddetails {
+            img {
+                display: none;
+            }
+        }
+    }
 }
