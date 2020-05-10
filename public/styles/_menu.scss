@@ -47,6 +47,18 @@ $myRose: #da0072;
   width: 20%;
   justify-content: center;
 
+  &__container {
+    display: flex;
+  }
+
+  &__btn {
+    border-radius: 20px;
+    border: none;
+    background: black;
+    position: absolute;
+    color: white;
+  }
+
   p {
     margin: 0px 10px;
   }

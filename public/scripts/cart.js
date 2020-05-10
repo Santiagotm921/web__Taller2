@@ -29,9 +29,11 @@ function onLoad() {
                 <img class="cart__item__shoe" src="${obj.img}" />
             </div>
             <div class="cart__item__span">
-                <h1 class="asdasd">` + obj.name + `</h1>
-                <p>${ obj.price}</p>
-                <img class="cart__item__rating" src="${obj.imgrating}" />
+                <h1>` + obj.name + `</h1>
+                <span class="cart__item__price"> 
+                    <h3> ${ obj.price} $</h3>
+                    <img class="cart__item__rating" src="${obj.imgrating}"/>
+                </span>
                 <button>eliminar</button>
           </div>
         `;

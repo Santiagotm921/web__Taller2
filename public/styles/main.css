@@ -73,6 +73,20 @@ body {
           justify-content: center;
 }
 
+.cart__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart__btn {
+  border-radius: 20px;
+  border: none;
+  background: black;
+  position: absolute;
+  color: white;
+}
+
 .cart p {
   margin: 0px 10px;
 }
@@ -1785,6 +1799,12 @@ img {
   color: #20b3d2;
 }
 
+.orders__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .checkout {
   background: #20b3d2;
   background: linear-gradient(318deg, #20b3d2 0%, #5edce4 95%);
@@ -1921,27 +1941,56 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0px;
+  border-bottom: 3px solid #20b3d2;
 }
 
-.cart__item p {
+.cart__item h3 {
   margin: 0px;
 }
 
 .cart__item__theshoe {
   width: 10%;
   height: 10%;
-  min-width: 130px;
+  min-width: 100px;
   border-radius: 20px;
   background: linear-gradient(318deg, #20b3d2 0%, #5edce4 95%);
 }
 
+.cart__item__theshoe img {
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
 .cart__item__rating {
-  width: 45%;
+  width: 35%;
   min-width: 130px;
+  margin: 0px 20px;
 }
 
 .cart__item__span {
   color: #20b3d2;
+  margin: 0px 0px 0px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart__item__span h1 {
+  margin: 0;
+}
+
+.cart__item__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0px;
 }
 
 .thanks {
