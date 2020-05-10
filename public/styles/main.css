@@ -1773,6 +1773,7 @@ img {
   position: absolute;
   width: 100%;
   pointer-events: none;
+  z-index: -1;
 }
 
 .orders {
@@ -1914,6 +1915,33 @@ img {
   .checkout__carddetails img {
     display: none;
   }
+}
+
+.cart__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart__item p {
+  margin: 0px;
+}
+
+.cart__item__theshoe {
+  width: 10%;
+  height: 10%;
+  min-width: 130px;
+  border-radius: 20px;
+  background: linear-gradient(318deg, #20b3d2 0%, #5edce4 95%);
+}
+
+.cart__item__rating {
+  width: 45%;
+  min-width: 130px;
+}
+
+.cart__item__span {
+  color: #20b3d2;
 }
 
 .thanks {

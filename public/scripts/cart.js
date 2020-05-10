@@ -24,11 +24,16 @@ function onLoad() {
             var newItem = document.createElement('div');
             newItem.classList.add('cart__item');
             newItem.innerHTML = `
-          <p class="asdasd">` + obj.name + `</p>
-          <img src="${obj.img}" />
-          <small>${ obj.price}</small>
-          <img src="${obj.imgrating}" />
-          <button>eliminar</button>
+            
+            <div class="cart__item__theshoe"> 
+                <img class="cart__item__shoe" src="${obj.img}" />
+            </div>
+            <div class="cart__item__span">
+                <h1 class="asdasd">` + obj.name + `</h1>
+                <p>${ obj.price}</p>
+                <img class="cart__item__rating" src="${obj.imgrating}" />
+                <button>eliminar</button>
+          </div>
         `;
             var btn = newItem.querySelector('button');
             btn.addEventListener('click', function () {
@@ -51,7 +56,6 @@ function onLoad() {
     // agregar event listener para poner nuevos productos en el carrito
     buttons.forEach(function (elem) {
         elem.addEventListener('click', function () {
-            //var name = elem.parentElement.parentElement.querySelector('a').innerText;
             var name = elem.getAttribute('data-name');
             var price = elem.getAttribute('data-price');
             var imgrating = elem.getAttribute('data-rating');

@@ -5,6 +5,7 @@
         position: absolute;
         width: 100%;
         pointer-events: none;
+        z-index: -1;
     }
 }
 
@@ -119,5 +120,34 @@
                 display: none;
             }
         }
+    }
+}
+
+.cart__item {
+    display: flex;
+
+    p {
+        margin: 0px;
+    }
+
+    &__theshoe {
+        width: 10%;
+        height: 10%;
+        min-width: 130px;
+        border-radius: 20px;
+        background: linear-gradient(318deg, rgba(32, 179, 210, 1) 0%, rgba(94, 220, 228, 1) 95%);
+    }
+
+    &__rating {
+        width: 45%;
+        min-width: 130px;
+    }
+
+    &__span {
+        color: rgb(32, 179, 210);
+    }
+
+    &__shoe {
+        
     }
 }
