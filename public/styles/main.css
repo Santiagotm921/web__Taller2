@@ -1803,6 +1803,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .checkout {
@@ -1812,6 +1815,7 @@ img {
   color: white;
   padding: 35px;
   font-size: 15px;
+  height: 100%;
 }
 
 .checkout input {
@@ -1991,6 +1995,17 @@ img {
       -ms-flex-align: center;
           align-items: center;
   margin: 10px 0px;
+}
+
+.cart__item__btn {
+  color: white;
+  border: none;
+  background: #20b3d2;
+  border-radius: 100%;
+}
+
+.cart__item__btn h1 {
+  margin: 0px;
 }
 
 .thanks {

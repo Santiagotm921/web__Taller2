@@ -19,6 +19,7 @@
 
     &__title {
         display: flex;
+        align-items: center;
     }
 }
 
@@ -29,6 +30,7 @@
     color: white;
     padding: 35px;
     font-size: 15px;
+    height: 100%;
 
     input {
         color: white;
@@ -171,4 +173,14 @@
         margin: 10px 0px;
     }
 
+    &__btn {
+        color: white;
+        border: none;
+        background: rgb(32, 179, 210);
+        border-radius: 100%;
+
+        h1 {
+            margin: 0px;
+        }
+    }
 }

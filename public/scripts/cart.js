@@ -34,8 +34,8 @@ function onLoad() {
                     <h3> ${ obj.price} $</h3>
                     <img class="cart__item__rating" src="${obj.imgrating}"/>
                 </span>
-                <button>eliminar</button>
           </div>
+          <button class="cart__item__btn"><h1>X</h1></button>
         `;
             var btn = newItem.querySelector('button');
             btn.addEventListener('click', function () {
